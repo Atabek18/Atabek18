@@ -4,31 +4,31 @@ import time
 df = pd.read_csv("world_population.csv")
 app = []
 columns = []
-country = data.get("Country").values
-mark = data.get("CCA3").values
-rank = data.get("Rank").values
-area = data.get("Area (km²)").values
-density = data.get("Density (per km²)").values
-Growth = data.get("Growth Rate").values
-persent = data.get("World Population Percentage").values
-year = data.get("2022 Population").values
-continent = data.get("Continent").values
-for i in data.columns:
-  if data.get(i).dtype == np.float64 or data.get(i).dtype == np.int64: 
+country = df.get("Country").values
+mark = df.get("CCA3").values
+rank = df.get("Rank").values
+area = df.get("Area (km²)").values
+density = df.get("Density (per km²)").values
+Growth = df.get("Growth Rate").values
+persent = df.get("World Population Percentage").values
+year = df.get("2022 Population").values
+continent = df.get("Continent").values
+for i in df.columns:
+  if df.get(i).dtype == np.float64 or df.get(i).dtype == np.int64: 
     columns.append(i)
-    app.append(data.get(i))
-all_data_year_or_something = []
+    app.append(df.get(i))
+all_dadfta_year_or_something = []
 len_data = []
 
 
 for j in app:
   len_data.append(len(j))
   for k in j:
-    all_data_year_or_something.append(k)
+    all_dadfta_year_or_something.append(k)
 num = 0
 num1 = []
 for l in len_data:
-  num1.append(all_data_year_or_something[num:num+l])
+  num1.append(all_dadfta_year_or_something[num:num+l])
   num+=l
 opp = []
 cont_ = []
